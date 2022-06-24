@@ -6,41 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMS</title>
     <!-- CSS only -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ81WUE00s/" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <div style="height: 10px; background:rgb(157, 110, 1) ;"></div>
+
+    <!-- navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
         <div class="container">
             <a href="#" class="navbar-brand">Starlabel</a>
-            <div class="collapse navbar-collapse" id="navbar"></div>
-            <ul class="navbar mr-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link"></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"></a>
-                </li>                <li class="nav-item">
-                    <a href="#" class="nav-link"></a>
-                </li>
-            </ul>
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#navbarcollapseCMS">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarcollapseCMS">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="MyProfile.html" class="nav-link"><i class="fa-duotone fa-user"></i> My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Dashboard.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Post.html" class="nav-link">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Categories.html" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ManageAdmin.html" class="nav-link">Manage Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                    </li>                <li class="nav-item">
+                        <a href="liveblog.html" class="nav-link">Live Blog</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="Logout.php" class="nav-link text-danger">
+                        <i class="fas fa-user-times"></i>Logout
+                    </a></li>
+                </ul>
+            </div> 
         </div>
     </nav>
+    <!-- end of navbar -->
+    <div style="height: 10px; background:rgb(157, 110, 1) ;"></div>
+    <div class="container">
+
+    </div>
+
+    <!-- footer start -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <p class="lead text-center">Theme By | Starlabel | <span id="year"></span> &copy; ---All right reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+    <div style="height: 10px; background:rgb(157, 110, 1) ;"></div>
     
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script>
+        $('#year').text(new Date().getFullYear())
+    </script>
 </body>
 </html>
