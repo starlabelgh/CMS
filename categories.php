@@ -1,3 +1,18 @@
+<?php require_once("Includes/DB.php")?>
+<?php require_once("Includes/Functions.php")?>
+<?php
+    if(isset($_POST["Submit"])){
+        $category = $_POST["CategoryTitle"];
+
+        if(empty($Category)){
+            Error= "All field must be filled"
+            Redirect_to("categories.php")
+        }
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,17 +77,46 @@
         <div class="container">
             <div class="row">
                 <div class="col-nd-12">
-                    <h1><i class="fas fa-edit" style="color: #27aae1;"></i> Basic</h1>
+                    <h1><i class="fas fa-edit" style="color: #27aae1;"></i> Manage Categories</h1>
                 </div>
             </div>
         </div>
     </header>
     <!-- end of head section -->
 
-    <div class="container">
+    <!-- start of main content -->
+    <section class="container py-2 mb-4">
+        <div class="row">
+            <div class="offset-lg-1 col-lg-10">
+                <form class="" action="categories.php" method="post">
+                    <div class="card bg-secondary text-light mb-3">
+                        <div class="card-header">
+                            <h1>Add New Category</h1>
+                        </div> 
+                        <div class="card-body bg-dark">
+                            <div class="form-group">
+                                <label for="title"><span class="FielfInfo">Category Title:</span></label>
+                                <input class="form-control" type="text" name="Title" id="title" placeholder="Type title here">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 mb-2">
+                                    <a href="Dashboard.php" class="btn btn-warning btn-block"><i class="fas fa-arrow-left"></i>Back to Dashboard</a>
+                                </div>
+                                <div class="col-lg-6 mb-2">
+                                    <button type="button" name="Submit" class="btn btn-success btn-block"><i class="fas fa-check"></i>Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        
+                    </div>
+                </form>
+            </div>
 
-    </div>
-
+        </div>
+    </section>
+    <!-- end of main content -->
     <!-- footer start -->
     <footer class="bg-dark text-white">
         <div class="container">
