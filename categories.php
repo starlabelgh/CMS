@@ -1,11 +1,12 @@
 <?php require_once("Includes/DB.php")?>
 <?php require_once("Includes/Functions.php")?>
+<?php require_once("Includes/Sessions.php")?>
 <?php
     if(isset($_POST["Submit"])){
         $category = $_POST["CategoryTitle"];
 
         if(empty($Category)){
-            Error= "All field must be filled"
+            $_SESSION[Error]= "All field must be filled"
             Redirect_to("categories.php")
         }
     }
@@ -47,7 +48,7 @@
                         <a href="Post.html" class="nav-link">Post</a>
                     </li>
                     <li class="nav-item">
-                        <a href="Categories.html" class="nav-link">Categories</a>
+                        <a href="Categories.php" class="nav-link">Categories</a>
                     </li>
                     <li class="nav-item">
                         <a href="ManageAdmin.html" class="nav-link">Manage Admin</a>
@@ -88,6 +89,10 @@
     <section class="container py-2 mb-4">
         <div class="row">
             <div class="offset-lg-1 col-lg-10">
+                <?php 
+                    echo ErrorMessage()
+                    echo SuccessMessage()
+                ?>
                 <form class="" action="categories.php" method="post">
                     <div class="card bg-secondary text-light mb-3">
                         <div class="card-header">
@@ -103,7 +108,7 @@
                                     <a href="Dashboard.php" class="btn btn-warning btn-block"><i class="fas fa-arrow-left"></i>Back to Dashboard</a>
                                 </div>
                                 <div class="col-lg-6 mb-2">
-                                    <button type="button" name="Submit" class="btn btn-success btn-block"><i class="fas fa-check"></i>Publish</button>
+                                    <button type="submit" name="Submit" class="btn btn-success btn-block"><i class="fas fa-check"></i>Publish</button>
                                 </div>
                             </div>
                         </div>
